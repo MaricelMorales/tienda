@@ -1,60 +1,59 @@
 import React from 'react';
 import './Navbar.css';
-
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="logo">
-        <img src="./img/logo (1).png" alt="Logo" />
+        <Link to="/">
+          <img src="./img/logo (1).png" alt="Logo" />
+        </Link>
       </div>
-      <ul className="navMenu">       
-        
-        <li class="Menu"><a href='#' >Catalogo</a>
-            <div class="menu-contenido">
-            <a href="#ficcion">Ficción</a>
-            <a href="#no-ficcion">No ficción</a>
-            <a href="#poesia">Poesía</a>
-            <a href="#filosofia">Filosofía</a>
-            <a href="#infantil">Infantil</a>
-           <a href="#libro-ilustrado">Libro ilustrado</a>
-            <a href="#arte">Arte</a>
-            <a href="#clasicos">Clásicos</a>
-            <a href="#comics">Comics - Novela gráfica</a>
-
-            </div>
+      <ul className="navMenu">
+        <li className="Menu">
+          <Link to="/catalogo">Catálogo</Link>
+          <div className="menu-contenido">
+            <Link to="/ficcion">Ficción</Link>
+            <Link to="/no-ficcion">No ficción</Link>
+            <Link to="/poesia">Poesía</Link>
+            <Link to="/filosofia">Filosofía</Link>
+            <Link to="/infantil">Infantil</Link>
+            <Link to="/libro-ilustrado">Libro ilustrado</Link>
+            <Link to="/arte">Arte</Link>
+            <Link to="/clasicos">Clásicos</Link>
+            <Link to="/comics">Comics - Novela gráfica</Link>
+          </div>
         </li>
-        <li class="Menu"><a href='#' >Populares</a>
-            <div class="menu-contenido">
-            <a href="#">1</a>
-            <a href="#">2</a>
-            <a href="#">3</a>
-            <a href="#">4</a>
-
-            </div>
+        <li className="Menu">
+          <Link to="/populares">Populares</Link>
+          <div className="menu-contenido">
+            <Link to="/populares/1">1</Link>
+            <Link to="/populares/2">2</Link>
+            <Link to="/populares/3">3</Link>
+            <Link to="/populares/4">4</Link>
+          </div>
         </li>
-
-        <li class="Menu"><a href='#' >Ofertas</a>
-            <div class="menu-contenido">
-            <a href="#">1</a>
-            <a href="#">2</a>
-            <a href="#">3</a>
-            <a href="#">4</a>
-
-            </div>
+        <li className="Menu">
+          <Link to="/ofertas">Ofertas</Link>
+          <div className="menu-contenido">
+            <Link to="/ofertas/1">1</Link>
+            <Link to="/ofertas/2">2</Link>
+            <Link to="/ofertas/3">3</Link>
+            <Link to="/ofertas/4">4</Link>
+          </div>
         </li>
-        <li class="Menu"><a href='#'>Contacto</a>
-            <div class="menu-contenido">
-            <a href="#">1</a>
-            <a href="#">2</a>
-            <a href="#">3</a>
-            <a href="#">4</a>
-
-            </div>
+        <li className="Menu">
+          <Link to="/contacto">Contacto</Link>
+          <div className="menu-contenido">
+            <Link to="/contacto/1">1</Link>
+            <Link to="/contacto/2">2</Link>
+            <Link to="/contacto/3">3</Link>
+            <Link to="/contacto/4">4</Link>
+          </div>
         </li>
       </ul>
-      <button className="navButton">
-      </button>
+      <button className="navButton"></button>
     </nav>
   );
 };

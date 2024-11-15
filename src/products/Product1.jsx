@@ -4,10 +4,12 @@ import React from "react";
 
 function Product1() {
     return (
-      <div className="cont-product1">
-        <h1>hola</h1>
-        <img src="./img/BibliotecadelaMedianoche.jpg" alt="La Biblioteca de la Medianoche" />
-
+      <div className="product">
+        <img src="/img/BibliotecadelaMedianoche.jpg" alt="La Bibliote
+        ca de la Medianoche" />
+        <h2 class="product-name">BibliotecadelaMedianoche</h2> <p class="product-price">$39.750</p> 
+        
+        <button class="buy-button" onclick="comprarProducto()">Comprar</button>
       
       </div>
 )
