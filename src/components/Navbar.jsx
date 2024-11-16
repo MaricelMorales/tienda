@@ -1,9 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Navbar.css';
 import { Link } from 'react-router-dom';
 
-const Navbar = () => {
-  
+const Navbar = ({ carrito = [], setCarrito, total, setTotal, countProducts, setCountProducts }) => {
+  const [active, setActive] = useState(false);
+
+  const onDeleteProduct = (product) => {
+    const results = carrito.filter(item => item.id !== product.id);
+    setTotal(total - product.precio * product.cantidad);
+    setCountProducts(countProducts - product.cantidad);
+    setCarrito(results);
+  };
+
+  const onCleanCart = () => {
+    setCarrito([]);
+    setTotal(0);
+    setCountProducts(0);
+  };
+
   return (
     <nav className="navbar">
       <div className="logo">
@@ -54,9 +68,38 @@ const Navbar = () => {
           </div>
         </li>
         <li className="Menu">
-          <Link onclick="document.getElementById('id01').style.display='block'">
-            <img className="carritoIMG" src="./img/carrito-de-compras.png" alt="" />
-          </Link>
+          <div className='container-icon' onClick={() => setActive(!active)}>
+            <img className="carritoIMG" src="./img/carrito-de-compras.png" alt="Carrito" />
+            <span className="count-products">{countProducts}</span>
+          </div>
+          <div className={`container-cart-products ${active ? '' : 'hidden-cart'}`}>
+            {carrito.length ? (
+              <>
+                <div className='row-product'>
+                  {carrito.map(product => (
+                    <div className='cart-product' key={product.id}>
+                      <div className='info-cart-product'>
+                        <span className='cantidad-producto-carrito'>{product.cantidad}</span>
+                        <p className='titulo-producto-carrito'>{product.titulo}</p>
+                        <img src={`./img/${product.imagen}`} alt={product.titulo} className='imagen-producto-carrito' />
+                        <span className='precio-producto-carrito'>${product.precio}</span>
+                      </div>
+                      <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' strokeWidth='1.5' stroke='currentColor' className='icon-close' onClick={() => onDeleteProduct(product)}>
+                        <path strokeLinecap='round' strokeLinejoin='round' d='M6 18L18 6M6 6l12 12' />
+                      </svg>
+                    </div>
+                  ))}
+                </div>
+                <div className='cart-total'>
+                  <h3>Total:</h3>
+                  <span className='total-pagar'>${total}</span>
+                </div>
+                <button className='btn-clear-all' onClick={onCleanCart}>Vaciar Carrito</button>
+              </>
+            ) : (
+              <p className='cart-empty'>El carrito está vacío</p>
+            )}
+          </div>
         </li>
       </ul>
       <button className="navButton"></button>
