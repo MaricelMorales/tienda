@@ -3,12 +3,12 @@
     align-items: center;
     justify-content: end;
     background-color: #ffffff;
-    padding: 10px 20%;
+    padding: 10px 26%;
     position: fixed;
     top: 0;
     width: 100%;
     box-shadow:  0 5px 15px #d1d1d16e ;
-    z-index: 1;   
+    z-index: 1;
 }
   
 .logo {
@@ -21,11 +21,20 @@
     margin-top: 5%;
 }
   
+.carritoIMG{
+    height: 30px;
+    margin: 0;
+
+
+}
 .navMenu {
     list-style: none;
     display: flex;
     gap: 20px;
     margin-right: 0%;
+    height: 40px;
+    align-items: center;
+    
 }
   
 .navMenu a {

@@ -3,6 +3,7 @@ import './Navbar.css';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
+  
   return (
     <nav className="navbar">
       <div className="logo">
@@ -53,7 +54,9 @@ const Navbar = () => {
           </div>
         </li>
         <li className="Menu">
-          <Link to="/carrito">Carrito de Compras</Link>
+          <Link onclick="document.getElementById('id01').style.display='block'">
+            <img className="carritoIMG" src="./img/carrito-de-compras.png" alt="" />
+          </Link>
         </li>
       </ul>
       <button className="navButton"></button>

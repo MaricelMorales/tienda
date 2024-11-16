@@ -1,32 +1,14 @@
 import React, { useState } from 'react';
 import './Home.css';
-import Navbar from '../Navbar.jsx';
-import { Link } from 'react-router-dom';
+import Navbar from './Navbar.jsx';
+import { productos } from '../productos.js';
 
-class Producto {
-  constructor(id, titulo, imagen, precio, autor, categoria, link) {
-    this.id = id;
-    this.titulo = titulo;
-    this.imagen = imagen;
-    this.precio = precio;
-    this.autor = autor;
-    this.categoria = categoria;
-    this.link = link;
-  }
-}
 
-const productos = [
-  new Producto(1, 'La Biblioteca de la Medianoche', 'BibliotecadelaMedianoche.jpg', 28600, 'HAIG, MATT', 'fantasía', './products/Product1'),
-  new Producto(2, 'Proyecto Hail Mary', 'ProyectoHeilMary.jpg', 35899, 'WEIR, ANDY', 'ciencia ficcion', '/products/Product2'),
-  new Producto(3, 'Viento y Verdad', 'vientoyverdad.webp', 32900, 'Sanderson, Brandon', 'fantasía', '/products/Product3'),
-  new Producto(4, 'Mañana, mañana y mañana', 'Mañana.jpg', 28600, 'HAIG, MATT', 'romance', '/products/Product4'),
-  new Producto(5, 'La Biblioteca de la Medianoche', 'ProyectoHeilMary.jpg', 28600, 'HAIG, MATT', 'fantasía', '/products/Product5'),
-];
 
 function Home() {
+
   const [busqueda, setBusqueda] = useState('');
   const [productosFiltrados, setProductosFiltrados] = useState(productos);
-  const [order, setOrder] = useState('titulo');
   const [carrito, setCarrito] = useState([]);
 
   const filtrarProductos = (productos, busqueda) => {
@@ -41,14 +23,6 @@ function Home() {
     const productosFiltrados = filtrarProductos(productos, valorBusqueda);
     setProductosFiltrados(productosFiltrados);
   };
-
-  const productosOrdenados = productosFiltrados.sort((a, b) => {
-    if (order === 'titulo') {
-      return a.titulo.localeCompare(b.titulo);
-    } else if (order === 'precio') {
-      return a.precio - b.precio;
-    }
-  });
 
   const agregarAlCarrito = (producto) => {
     setCarrito([...carrito, producto]);
@@ -67,7 +41,7 @@ function Home() {
         />
         <h1>Libros Populares</h1>
         <div className="Home-products">
-          {productosOrdenados.map(producto => (
+          {productosFiltrados.map(producto => (
             <div key={producto.id} className="Home-product">
               <img src={`./img/${producto.imagen}`} alt={producto.titulo} />
               <h3>{producto.titulo}</h3>
@@ -104,19 +78,21 @@ function Home() {
         </aside>
       </section>
 
-      <section id="carrito" className="Home-section">
-        <h1>Carrito de Compras</h1>
-        <div className="Home-products">
-          {carrito.map(producto => (
-            <div key={producto.id} className="Home-product">
-              <img src={`./img/${producto.imagen}`} alt={producto.titulo} />
-              <h3>{producto.titulo}</h3>
-              <p>{producto.autor}</p>
-              <p className='precio'>${producto.precio}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+      <div id="id01" className="modal">
+        <section id="carrito" className="Home-section">
+          <h1>Carrito de Compras</h1>
+          <div className="Home-products">
+            {carrito.map(producto => (
+              <div key={producto.id} className="Home-product">
+                <img src={`./img/${producto.imagen}`} alt={producto.titulo} />
+                <h3>{producto.titulo}</h3>
+                <p>{producto.autor}</p>
+                <p className='precio'>${producto.precio}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      </div>
 
       <footer className="Home-footer">
         <p>Contacto: info@booksbook.com</p>

@@ -1,4 +1,4 @@
-import { data } from '../data';
+import { productos } from '../data.js';
 
 export const ProductList = ({
 	allProducts,
@@ -12,29 +12,29 @@ export const ProductList = ({
 		if (allProducts.find(item => item.id === product.id)) {
 			const products = allProducts.map(item =>
 				item.id === product.id
-					? { ...item, quantity: item.quantity + 1 }
+					? { ...item, cantidad: item.cantidad + 1 }
 					: item
 			);
-			setTotal(total + product.price * product.quantity);
-			setCountProducts(countProducts + product.quantity);
+			setTotal(total + product.precio * product.cantidad);
+			setCountProducts(countProducts + product.cantidad);
 			return setAllProducts([...products]);
 		}
 
-		setTotal(total + product.price * product.quantity);
-		setCountProducts(countProducts + product.quantity);
+		setTotal(total + product.precio * product.cantidad);
+		setCountProducts(countProducts + product.cantidad);
 		setAllProducts([...allProducts, product]);
 	};
 
 	return (
 		<div className='container-items'>
-			{data.map(product => (
+			{productos.map(product => (
 				<div className='item' key={product.id}>
 					<figure>
-						<img src={product.img} alt={product.nameProduct} />
+						<imagen src={product.imagen} alt={product.titulo} />
 					</figure>
 					<div className='info-product'>
-						<h2>{product.nameProduct}</h2>
-						<p className='price'>${product.price}</p>
+						<h2>{product.titulo}</h2>
+						<p className='precio'>${product.precio}</p>
 						<button onClick={() => onAddProduct(product)}>
 							Añadir al carrito
 						</button>
