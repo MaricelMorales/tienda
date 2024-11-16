@@ -47,7 +47,6 @@ function Home() {
         setCountProducts={setCountProducts}
       />
       <header>
-        <h1>Tienda</h1>
         <input className='BusquedaBarra' type="text" id="busqueda" value={busqueda} onChange={handleBusqueda} placeholder="Buscar libros..." />
       </header>
       <section id="popular" className="Home-section">

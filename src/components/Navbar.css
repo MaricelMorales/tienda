@@ -1,14 +1,19 @@
 .navbar {
     display: flex;
     align-items: center;
-    justify-content: end;
     background-color: #ffffff;
-    padding: 10px 26%;
     position: fixed;
     top: 0;
     width: 100%;
     box-shadow:  0 5px 15px #d1d1d16e ;
     z-index: 1;
+    
+}
+.container-navbar{
+    width: auto;
+    margin: auto;
+    display: flex;
+    align-items: center;
 }
   
 .logo {
@@ -24,7 +29,6 @@
 .carritoIMG{
     height: 30px;
     margin: 0;
-
 
 }
 .navMenu {

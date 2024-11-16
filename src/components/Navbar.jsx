@@ -20,6 +20,7 @@ const Navbar = ({ carrito = [], setCarrito, total, setTotal, countProducts, setC
 
   return (
     <nav className="navbar">
+      <div className='container-navbar'>
       <div className="logo">
         <Link to="/">
           <img src="./img/logo (1).png" alt="Logo" />
@@ -80,8 +81,8 @@ const Navbar = ({ carrito = [], setCarrito, total, setTotal, countProducts, setC
                     <div className='cart-product' key={product.id}>
                       <div className='info-cart-product'>
                         <span className='cantidad-producto-carrito'>{product.cantidad}</span>
-                        <p className='titulo-producto-carrito'>{product.titulo}</p>
                         <img src={`./img/${product.imagen}`} alt={product.titulo} className='imagen-producto-carrito' />
+                        <p className='titulo-producto-carrito'>{product.titulo}</p>
                         <span className='precio-producto-carrito'>${product.precio}</span>
                       </div>
                       <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' strokeWidth='1.5' stroke='currentColor' className='icon-close' onClick={() => onDeleteProduct(product)}>
@@ -102,7 +103,8 @@ const Navbar = ({ carrito = [], setCarrito, total, setTotal, countProducts, setC
           </div>
         </li>
       </ul>
-      <button className="navButton"></button>
+      </div>
+
     </nav>
   );
 };
