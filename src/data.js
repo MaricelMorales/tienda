@@ -12,9 +12,9 @@ class Producto {
 };
 
  export const productos = [
-  new Producto(1, 'La Biblioteca de la Medianoche', 'BibliotecadelaMedianoche.jpg', 28600, 'HAIG, MATT', 'fantasía', 1, './products/Product1'),
-  new Producto(2, 'Proyecto Hail Mary', 'ProyectoHeilMary.jpg', 35899, 'WEIR, ANDY', 'ciencia ficcion', 1, '/products/Product2'),
-  new Producto(3, 'Viento y Verdad', 'vientoyverdad.webp', 32900, 'Sanderson, Brandon', 'fantasía', 1, '/products/Product3'),
+  new Producto(1, 'La Biblioteca de la Medianoche', 'BibliotecadelaMedianoche.jpg', 28600, 'HAIG, MATT', 'fantasía', 1, './products/Producto1'),
+  new Producto(2, 'Proyecto Hail Mary', 'ProyectoHeilMary.jpg', 35899, 'WEIR, ANDY', 'ciencia ficcion', 1, '/products/Producto2'),
+  new Producto(3, 'Viento y Verdad', 'vientoyverdad.webp', 32900, 'Sanderson, Brandon', 'fantasía', 1, '/products/Producto3'),
   new Producto(4, 'Mañana, mañana y mañana', 'Mañana.jpg', 28600, 'HAIG, MATT', 'romance', 1, '/products/Product4'),
-  new Producto(5, 'La Biblioteca de la Medianoche', 'ProyectoHeilMary.jpg', 28600, 'HAIG, MATT', 'fantasía', 1, '/products/Product5'),
+  new Producto(5, 'La Biblioteca de la Medianoche', 'ProyectoHeilMary.jpg', 28600, 'HAIG, MATT', 'fantasía', 1, '/products/Producto5'),
 ];

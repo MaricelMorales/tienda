@@ -1,0 +1,34 @@
+.Producto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.Producto img {
+  max-width: 300px;
+  margin-bottom: 20px;
+}
+
+.Producto h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.Producto h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.Producto .precio {
+  font-size: 1.2em;
+  color: #b12704;
+  margin-bottom: 20px;
+}
+
+.Producto .sinopsis,
+.Producto .informacion {
+  font-size: 1em;
+  margin-bottom: 10px;
+  text-align: justify;
+}
