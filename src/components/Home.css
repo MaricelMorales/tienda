@@ -23,11 +23,11 @@
 
 .BusquedaBarra{
   margin: auto;
-  margin-top: 200px;
+  margin-top: 170px;
   border-radius: 30px;
   padding: 1%;
   display: flex;
-  width: 40%;
+  width: 50%;
   border: solid 2px #baa037;
 }
 

@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 import './Home.css';
 import Navbar from './Navbar.jsx';
 import { productos } from '../data.js';
+import { Link } from 'react-router-dom';
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Home() {
   const [busqueda, setBusqueda] = useState('');
@@ -24,14 +28,17 @@ function Home() {
   };
 
   const agregarAlCarrito = (producto) => {
-    const productoExistente = carrito.find(item => item.id === producto.id);
-    if (productoExistente) {
-      productoExistente.cantidad += 1;
+    const productoEnCarrito = carrito.find(item => item.id === producto.id);
+    if (productoEnCarrito) {
+      productoEnCarrito.cantidad ++;
       setCarrito([...carrito]);
     } else {
       producto.cantidad = 1;
       setCarrito([...carrito, producto]);
     }
+
+    toast.success('Libro agregado al carrito');
+    
     setTotal(total + producto.precio);
     setCountProducts(countProducts + 1);
   };
@@ -54,14 +61,17 @@ function Home() {
         <div className="Home-products">
           {productosFiltrados.map(producto => (
             <div key={producto.id} className="Home-product">
-              <img src={`./img/${producto.imagen}`} alt={producto.titulo} />
-              <h3>{producto.titulo}</h3>
-              <p>{producto.autor}</p>
-              <p className='precio'>${producto.precio}</p>
+              <Link to={producto.link}>
+                <img src={`./img/${producto.imagen}`} alt={producto.titulo} />
+                <h3>{producto.titulo}</h3>
+                <p>{producto.autor}</p>
+                <p className='precio'>${producto.precio}</p>
+              </Link>
               <button onClick={() => agregarAlCarrito(producto)}>Agregar al Carrito</button>
             </div>
           ))}
         </div>
+
       </section>
       <section className='Banner'>
         <aside className="responsive-banner first">
@@ -97,6 +107,7 @@ function Home() {
           <li><a href="#">Instagram</a></li>
         </ul>
       </footer>
+      <ToastContainer />
     </div>
   );
 }
