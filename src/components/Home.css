@@ -273,7 +273,7 @@ html, button, input, select, textarea {
   font-family: 'Source Sans Pro', Helvetica, sans-serif;
   color: #90b0bf;
 }
-h1 {
+.Home-section h1 {
   text-align: center;
   margin: 30px 15px;
 }

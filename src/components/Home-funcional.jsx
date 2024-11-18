@@ -61,7 +61,8 @@ function Home() {
         <div className="Home-products">
           {productosFiltrados.map(producto => (
             <div key={producto.id} className="Home-product">
-              <Link to={producto.link}>
+              {/*<Link to={producto.link}>*/}
+              <Link to={`/products/${producto.id}`}>
                 <img src={`./img/${producto.imagen}`} alt={producto.titulo} />
                 <h3>{producto.titulo}</h3>
                 <p>{producto.autor}</p>

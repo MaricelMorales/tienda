@@ -1,20 +1,23 @@
 class Producto {
-  constructor(id, titulo, imagen, precio, autor, categoria, cantidad, link) {
+  constructor(id, titulo, imagen, precio, autor, categoria,isbn, cantidad, sinopsis) {
     this.id = id;
     this.titulo = titulo;
     this.imagen = imagen;
     this.precio = precio;
     this.autor = autor;
     this.categoria = categoria;
+    this.isbn = isbn;
     this.cantidad = cantidad;
-    this.link = link;
+    this.sinopsis = sinopsis;
   }
 };
 
  export const productos = [
-  new Producto(1, 'La Biblioteca de la Medianoche', 'BibliotecadelaMedianoche.jpg', 28600, 'HAIG, MATT', 'fantasía', 1, './products/Producto1'),
-  new Producto(2, 'Proyecto Hail Mary', 'ProyectoHeilMary.jpg', 35899, 'WEIR, ANDY', 'ciencia ficcion', 1, '/products/Producto2'),
-  new Producto(3, 'Viento y Verdad', 'vientoyverdad.webp', 32900, 'Sanderson, Brandon', 'fantasía', 1, '/products/Producto3'),
-  new Producto(4, 'Mañana, mañana y mañana', 'Mañana.jpg', 28600, 'HAIG, MATT', 'romance', 1, '/products/Product4'),
-  new Producto(5, 'La Biblioteca de la Medianoche', 'ProyectoHeilMary.jpg', 28600, 'HAIG, MATT', 'fantasía', 1, '/products/Producto5'),
+  new Producto(1, 'La Biblioteca de la Medianoche', 'BibliotecadelaMedianoche.jpg', 28600, 'HAIG, MATT', 'fantasía', 9789878977096, 1, '«entre la vida y la muerte hay una biblioteca. y los estantes de esa biblioteca son infinitos. cada libro da la oportunidad de probar otra vida que podrías haber vivido y de comprobar cómo habrían cambiado las cosas si hubieras tomado otras decisiones... ¿habrías hecho algo de manera diferente si hubieras tenido la oportunidad?».nora seed aparece, sin saber cómo, en la biblioteca de la medianoche, donde se le ofrece una nueva oportunidad para hacer las cosas bien. hasta ese momento, su vida ha estado marcada por la infelicidad y el arrepentimiento.nora siente que ha defraudado a todos, y también a ella misma. pero esto está a punto de cambiar.los libros de la biblioteca de la medianoche permitirán a nora vivir como si hubiera hecho las cosas de otra manera. con la ayuda de una vieja amiga, tendrá la opción de esquivar todo aquello que se arrepiente de haber hecho o no haber hecho , en pos de la vida perfecta. pero las cosas no siempre serán como imaginó que serían, y pronto sus decisiones enfrentarán a la biblioteca y a ella misma en un peligro extremo. nora deberá responder una última pregunta antes de que el tiempo se agote: ¿cuál es la mejor manera de vivir?'), 
+  new Producto(2, 'Proyecto Hail Mary', 'ProyectoHeilMary.jpg', 35899, 'WEIR, ANDY', 'ciencia ficcion',  9789878977096, 1, 'Ryland Grace es el único superviviente en una misión desesperada. Es la última oportunidad y, si fracasa, la humanidad y la Tierra misma perecerán. Claro que, de momento, él no lo sabe. Ni siquiera puede recordar su propio nombre, y mucho menos la naturaleza de su misión o cómo llevarla a cabo. Lo único que sabe es que ha estado en coma inducido durante mucho mucho tiempo. Acaba de despertar y se encuentra a millones de kilómetros de su hogar, sin más compañía que la de dos cadáveres. Muertos sus compañeros de tripulación, y a medida que va recuperando confusamente los recuerdos, Grace se da cuenta de que se enfrenta a una misión imposible. Recorriendo el espacio en una pequeña nave, depende de él acabar con una amenaza de extinción para nuestra especie. Sin apenas tiempo y con el ser humano más cercano a años luz de distancia, habrá de conseguirlo estando completamente solo. ¿O no? Proyecto Hail Mary, una aventura interestelar irresistible como solo Andy Weir podía imaginar, es una historia de descubrimiento, especulación y supervivencia a la altura de El marciano, que nos lleva a lugares que nunca soñamos alcanzar.' ),
+  new Producto(3, 'Viento y Verdad', 'vientoyverdad.webp', 32900, 'Sanderson, Brandon', 'fantasía', 9878977096, 1, 'La esperada y explosiva conclusión del primer arco de El Archivo de las Tormentas, la emblemática obra maestra de la fantasía épica de Brandon Sanderson, con más de diez millones de lectores en todo el mundo. Dalinar Kholin desafió al malvado dios Odium a un duelo de campeones en el que se decidirá el futuro de Roshar. Los Caballeros Radiantes solo tienen diez días para prepararse... y la repentina ascensión del taimado e implacable Taravangian al puesto de Odium lo ha sumido todo en una tremenda confusión. La lucha desesperada prosigue simultáneamente a lo largo y ancho del mundo: Adolin en Azimir, Sigzil y Venli en las Llanuras Quebradas y Jasnah en Ciudad Thaylen. El exasesino Seth deberá purgar Shinovar, su tierra natal, de la oscura influencia de los Deshechos. Lo acompaña Kaladin, que afronta una nueva batalla ayudando a Seth a combatir sus propios demonios... y tendrá que hacer lo mismo con Ishar, el demente Heraldo del Todopoderoso. Al mismo tiempo, Shallan, Renarin y Rlain se esfuerzan en desentrañar el misterio que hay tras la Deshecha Ba-Ado-Mishram, el de qué papel tuvo en la esclavización de la especie cantora y en el hecho de que los antiguos Caballeros Radiantes mataran a sus spren. Y Dalinar y Navani buscan una ventaja contra el campeón de Odium que solo puede hallarse en el Reino Espiritual, donde el recuerdo y la posibilidad se combinan en el caos. El destino de todo el Cosmere pende de un hilo.'),
+
+
+  new Producto(4, 'Mañana, mañana y mañana', 'Mañana.jpg', 28600, 'HAIG, MATT', 'romance', 9789878977096, 1, 'e'),
+  new Producto(5, 'La Biblioteca de la Medianoche', 'ProyectoHeilMary.jpg', 28600, 'HAIG, MATT', 'fantasía', 9789878977096, 1, 'eee'),
 ];
