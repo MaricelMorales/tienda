@@ -1,0 +1,79 @@
+.checkout {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    margin-top: 150px;
+  }
+  .msj{
+    color: #45a049;
+    margin-top: 200px;
+  }
+  .checkout h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .checkout ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .checkout ul li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .checkout h3 {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .checkout form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .checkout form div {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .checkout form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .checkout form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .checkout form button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .checkout form button:hover {
+    background-color: #45a049;
+  }
+  
+  .checkout p {
+    text-align: center;
+    color: green;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  

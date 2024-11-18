@@ -4,6 +4,9 @@ import Navbar from './components/Navbar';
 import Home from './components/Home-funcional';
 import ProductoDetalle from './components/ProductoDetalle';
 
+
+import Checkout from './components/Checkout';
+
 function App() {
   const [carrito, setCarrito] = useState([]);
   const [total, setTotal] = useState(0);
@@ -40,6 +43,7 @@ function App() {
             setCountProducts={setCountProducts}
           />
         } />
+        <Route path="/checkout" element={ <Checkout carrito={carrito} total={total} /> } />
       </Routes>
     </Router>
   );
