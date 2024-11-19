@@ -14,11 +14,14 @@
   .checkout h2 {
     text-align: center;
     margin-bottom: 20px;
+    color: rgba(0, 0, 0, 0.742);
+
   }
   
   .checkout ul {
     list-style-type: none;
     padding: 0;
+    color: rgba(0, 0, 0, 0.742);
   }
   
   .checkout ul li {
@@ -26,18 +29,24 @@
     justify-content: space-between;
     padding: 10px 0;
     border-bottom: 1px solid #ccc;
+    
   }
   
   .checkout h3 {
     text-align: center;
     margin-top: 20px;
+    color: rgba(0, 0, 0, 0.742);
+
   }
   
   .checkout form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 24px;
     margin-top: 20px;
+    color: rgb(71, 71, 71);
+    font-size: 15px;
+
   }
   
   .checkout form div {
@@ -47,13 +56,13 @@
   
   .checkout form label {
     margin-bottom: 5px;
-    font-weight: bold;
   }
   
   .checkout form input {
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #e7d448;
     border-radius: 5px;
+    color: #4CAF50;
   }
   
   .checkout form button {

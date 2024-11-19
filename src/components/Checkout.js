@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-
 import './Checkout.css';
-
 
 const Checkout = ({ carrito, total }) => {
   const [nombre, setNombre] = useState('');
@@ -20,9 +18,9 @@ const Checkout = ({ carrito, total }) => {
     <div className="checkout">
       <h2>Resumen del Pedido</h2>
       <ul>
-        {carrito.map(producto => (
-          <li key={producto.id}>
-            {producto.titulo} - {producto.cantidad} x ${producto.precio}
+        {carrito.map(product => (
+          <li key={product.id}>
+            {product.titulo} - {product.cantidad} x ${product.precio}
           </li>
         ))}
       </ul>
@@ -50,7 +48,7 @@ const Checkout = ({ carrito, total }) => {
         </div>
         <button type="submit">Pagar</button>
       </form>
-      {mensaje && <p className='msj'>{mensaje}</p>}
+      {mensaje && <p>{mensaje}</p>}
     </div>
   );
 };

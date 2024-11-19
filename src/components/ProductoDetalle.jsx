@@ -42,7 +42,7 @@ function ProductoDetalle({ carrito, setCarrito, total, setTotal, countProducts, 
 
       </div>
 
-      <p>{producto.sinopsis}</p>
+      <p>{producto.sinopsis.split('\n').map((line, index) => ( <p key={index}>{line}</p> ))}</p>
       <p>{producto.isbn}</p>
 
     </div>
@@ -51,32 +51,3 @@ function ProductoDetalle({ carrito, setCarrito, total, setTotal, countProducts, 
 
 export default ProductoDetalle;
 
-
-{/*
-  import React from 'react';
-import { useParams } from 'react-router-dom';
-import './Product.css'; // Asegúrate de importar el archivo CSS
-
-const ProductoDetalle = ({ productos }) => {
-  const { id } = useParams();
-  const producto = productos.find(p => p.id === parseInt(id));
-
-  if (!producto) {
-    return <div>Producto no encontrado</div>;
-  }
-
-  return (
-    <div className="producto-detalle">
-      <h1>{producto.titulo}</h1>
-      <img src={`../img/${producto.imagen}`} alt={producto.titulo} />
-      <p>{producto.autor}</p>
-      <p>$ {producto.precio}</p>
-      <p>{producto.categoria}</p>
-      <button>Agregar al Carrito</button>
-    </div>
-  );
-};
-
-export default ProductoDetalle;
-
-*/}

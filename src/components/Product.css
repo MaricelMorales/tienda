@@ -48,12 +48,14 @@
   color: #000000;
   background-color: #e2c72f;
   border: none;
-  border-radius: 50PX;
+  border-radius: 50px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .producto-detalle button:hover {
   background-color: #ffffff;
-  border: #e2c72f 3px solid;
+  border: #e2c72f 2px solid;
+  padding: 8px 18px;
+
 }

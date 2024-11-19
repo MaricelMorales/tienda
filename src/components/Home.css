@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&family=Mada:wght@200..900&family=Poppins:wght@100..900&family=Syne:wght@400..800&display=swap');
 
+
+body{
+    margin: 0;
+}
 .Home-section {
   color: black;
   display: inline;
@@ -9,13 +13,12 @@
   color: rgb(179, 179, 179);
   width: 80%;
   display: block;
-  margin: 4% 9%;
-  margin-top: 50px;
+  margin: 4% 10%;
+  margin-top: 20px;
   font-family: 'Mada';
 }
 
 .Home-section h1 {
-  margin-bottom: 2%;
   color: #000;
   text-align: center;
   font-size: xx-large;
@@ -38,12 +41,18 @@
   margin:auto;
   margin-bottom: 5%;
   flex-wrap: nowrap;
+  align-items: center;
 }
 
 .Home-product img, .Home-product p, .Home-product h3 {
   color: #0c2841;
   border-radius: 2%;
   padding: 0;
+ 
+}
+
+.Home-product a {
+  text-decoration: none;
 }
 
 .Home-product p {
@@ -55,19 +64,39 @@
 .Home-product h3 {
   font-size: large;
   margin: auto;
-
   margin-top: 5%;
+}
+
+.Home-product button {
+  padding: 10px 10px;
+  font-size: small;
+  color: #000000;
+  background-color: #e2c72f;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 0 15%;
+  width: 70%;
+  margin-bottom: 5%;
+}
+
+.Home-product button:hover {
+  background-color: #ffffff;
+  border: #e2c72f 2px solid;
+  padding: 8px 8px;
 
 }
+
 
 .Home-product {
   border-radius: 1%;
   display: inline-block;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.059);
+  box-shadow: 0 15px 25px rgba(108, 75, 75, 0.42);
   transition: transform 0.3s ease-in-out;
-  width: 200px;
-  height: 350px; 
-  margin: auto;
+  width: 40%;
+  margin: 10px;
+
 }
 .Home-product:hover {
   transform: translateY(-30px);
@@ -143,153 +172,91 @@
   }
 }
 
-/* Banner: fuente https://codepen.io/ricardpriet/pen/xXaXOR?editors=1100  */
-
-.responsive-banner {
-  display: inline-block;
-  margin: 50px;
-  width: 80%;
-  min-width: 320px;
-  position: relative;
-  min-height: 300px;
-  max-height: 450px;
+.offer-banner {
+  background-color: #ffcc00;
+  padding: 20px;
+  text-align: center;
   border-radius: 10px;
-  overflow: hidden;
-	background-image: linear-gradient(to bottom right, #d4ce5b, #d9b420);
-	background-repeat: no-repeat;
-  text-align: left;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  margin: 20px 0;
 }
 
-.container-envelope {
-  max-width: calc(100%);
-  padding: 15px;
-  color: #020202;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 300px;
-  max-height: 450px;
-}
-.col-xs-12 {
-  -webkit-box-flex: 0;
-    -webkit-flex: 0 0 100%;
-    -ms-flex: 0 0 100%;
-    flex: 0 0 100%;
-    max-width: 100%;
-  -webkit-align-self: flex-end;
-			-ms-flex-item-align: end;
-					align-self: flex-end;
+.offer-banner h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
 }
 
-@media (min-width: 650px) {
-  .col-xs-12 {
-    -webkit-align-self: center;
-      -ms-flex-item-align: center;
-      align-self: center;
-  }
-    .container-envelope {
-    max-width: calc(100% - 200px);
-  }
-}
-p {
-    clear: both;
-    font-family: 'Work Sans', Helvetica, sans-serif;
-    text-transform: none;
-    text-rendering: optimizeLegibility;
-    font-weight: 500;
-    line-height: 1.15;
-    word-wrap: break-word;
-    margin: 1em 0 0.5em;
-    margin: 0;
-    padding: 0;
-    color: #fff;
-    position: relative;
-    word-wrap: break-word;
-  font-size: 20px;
-  margin-bottom: 20px;
-}
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-a.more-link {
-    background-color: rgba(255, 255, 255, 0.35);
-    display: inline-block;
-    padding: 12px 18px;
-    color: #fff;
-    text-decoration: none;
-    font: 500 15px 'Work Sans', Helvetica, sans-serif;
-    line-height: 1.5;
-    text-align: center;
-    border: none !important;
-    position: relative;
-    border-radius: 30px;
-  text-transform: uppercase;
-    -webkit-transition: .1s all ease-in-out;
-    -moz-transition: .1s all ease-in-out;
-    -o-transition: .1s all ease-in-out;
-    transition: .1s all ease-in-out;
-}
-a.more-link:hover {
-  background-color: rgba(255, 255, 255, 0.50);
-}
-.Banner svg, .Banner img {
-  fill: rgba(0, 0, 0, 0.1);
-  position: absolute;
-}
-.Banner img {
-  max-width : 50%;
-}
-.cirle-a {
-  bottom: -80px;
-  left: -80px;
-}
-.cirle-b {
-  top: -30px;
-  right: 70%;
-}
-.cirle-c {
-  top: -330px;
-  right: -300px;
-}
-.cirle-d {
-  top: 195px;
-      right: 145px;
-}
-.Banner img {
-  top: 0;
-  right: 0;
+.offer-banner p {
+  margin: 10px 0;
+  font-size: 18px;
+  color: #333;
 }
 
-.Banner {
-  background-color: #eff2f7;
-  margin-bottom: 50px;
-  text-align: center;
-}
-html, button, input, select, textarea {
-  font-family: 'Source Sans Pro', Helvetica, sans-serif;
-  color: #90b0bf;
-}
-.Home-section h1 {
-  text-align: center;
-  margin: 30px 15px;
-}
-.link-container {
-  text-align: center;
-}
-.link-container a.more-link {
-  font-family: 'Source Sans Pro', Helvetica, sans-serif;
-  background-color: #90b0bf;
+.offer-banner .btn-shop-now {
+  background-color: #333;
   color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.offer-banner .btn-shop-now:hover {
+  background-color: #555;
+}
+
+.offer-products {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin:auto;
+  margin-bottom: 5%;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+
+.offer-product {
+  border-radius: 1%;
   display: inline-block;
-  margin-right: 5px;
-  margin-bottom: 5px;
-  line-height: 1.5;
+  box-shadow: 0 15px 25px rgba(108, 75, 75, 0.42);
+  transition: transform 0.3s ease-in-out;
+  width: 30%;
+  margin: 10px;
+  background-color: #fff;
+
+}
+.offer-product:hover {
+  transform: translateY(-30px);
+  cursor: pointer;
+}
+.offer-product:hover p, .offer-product:hover h3 {
+  color: rgb(163, 125, 21);
+}
+.offer-product img {
+  width: 40%;
+  margin: 0 15%;
+  margin-top: 12%;
+  object-fit: cover; 
+}
+
+.offer-product p, .offer-product h3 {
+  text-align: center;
+}
+.offer-product-link{
+  text-decoration: none; 
+  color: inherit; 
+}
+
+
+.offer-product a {
   text-decoration: none;
-  text-transform: none;
-  font-weight: 400;
-  letter-spacing: 1px;
+}
+
+.offer-product img, .offer-product p, .offer-product h3 {
+  color: #0c2841;
+  border-radius: 2%;
+  padding: 0;
+ 
 }
