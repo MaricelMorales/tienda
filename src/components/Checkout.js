@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import './Checkout.css';
 
 const Checkout = ({ carrito, total }) => {
-  const [nombre, setNombre] = useState('');
-  const [apellido, setApellido] = useState('');
-  const [tarjeta, setTarjeta] = useState('');
-  const [vencimiento, setVencimiento] = useState('');
-  const [cvv, setCvv] = useState('');
-  const [mensaje, setMensaje] = useState('');
+
+  const [nombre, setNombre] = useState(''); // Estado para el nombre del usuario
+  const [apellido, setApellido] = useState(''); // Estado para el apellido del usuario
+  const [tarjeta, setTarjeta] = useState(''); // Estado para el número de tarjeta de crédito
+  const [vencimiento, setVencimiento] = useState(''); // Estado para la fecha de vencimiento de la tarjeta
+  const [cvv, setCvv] = useState(''); // Estado para el CVV de la tarjeta
+  const [mensaje, setMensaje] = useState(''); // Estado para el mensaje
 
   const handleSubmit = (e) => {
     e.preventDefault();
