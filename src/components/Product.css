@@ -1,0 +1,64 @@
+/* ProductoDetalle.css */
+.producto-detalle {
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding-top: 120px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.detalle-principal{
+  display: flex;
+  width: 100%;
+}
+.img{
+  width: 30%;
+}
+
+.txt{
+  width: 70%;
+  margin-top: 50px;
+}
+
+.producto-detalle img {
+  width: 90%;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.producto-detalle h1 {
+  font-size: xx-large;
+  color: #333;
+  left: 0;
+}
+
+.producto-detalle p {
+  font-size: medium;
+  color: #666;
+  width: 100%;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.producto-detalle button {
+  padding: 10px 20px;
+  font-size: medium;
+  color: #000000;
+  background-color: #e2c72f;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.producto-detalle button:hover {
+  background-color: #ffffff;
+  border: #e2c72f 2px solid;
+  padding: 8px 18px;
+
+}

@@ -1,0 +1,88 @@
+.checkout {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    margin-top: 150px;
+  }
+  .msj{
+    color: #45a049;
+    margin-top: 200px;
+  }
+  .checkout h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgba(0, 0, 0, 0.742);
+
+  }
+  
+  .checkout ul {
+    list-style-type: none;
+    padding: 0;
+    color: rgba(0, 0, 0, 0.742);
+  }
+  
+  .checkout ul li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+    
+  }
+  
+  .checkout h3 {
+    text-align: center;
+    margin-top: 20px;
+    color: rgba(0, 0, 0, 0.742);
+
+  }
+  
+  .checkout form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 20px;
+    color: rgb(71, 71, 71);
+    font-size: 15px;
+
+  }
+  
+  .checkout form div {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .checkout form label {
+    margin-bottom: 5px;
+  }
+  
+  .checkout form input {
+    padding: 10px;
+    border: 1px solid #e7d448;
+    border-radius: 5px;
+    color: #4CAF50;
+  }
+  
+  .checkout form button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .checkout form button:hover {
+    background-color: #45a049;
+  }
+  
+  .checkout p {
+    text-align: center;
+    color: green;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  

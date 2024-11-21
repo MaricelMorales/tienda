@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&family=Mada:wght@200..900&family=Poppins:wght@100..900&family=Syne:wght@400..800&display=swap');
+
+body {
+    margin: 0;
+}
+
+.Home-section, .container-resultados {
+    color: black;
+    display: inline;
+}
+
+.Home-section p, .Home-section h1, .container-resultados p, .container-resultados h1 {
+    color: rgb(179, 179, 179);
+    width: 80%;
+    display: block;
+    margin: 4% 10%;
+    margin-top: 20px;
+    font-family: 'Mada';
+}
+
+.Home-section h1, .container-resultados h1 {
+    color: #000;
+    text-align: center;
+    font-size: xx-large;
+}
+
+.BusquedaBarra {
+    margin: auto;
+    margin-top: 170px;
+    border-radius: 30px;
+    padding: 1%;
+    display: flex;
+    width: 50%;
+    border: solid 2px #baa037;
+}
+
+.Home-products, .Home-resultados, .offer-products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 5%;
+    align-items: center;
+}
+
+.Home-product img, .Home-product p, .Home-product h3, .Home-resultado img, .Home-resultado p, .Home-resultado h3, .offer-product img, .offer-product p, .offer-product h3 {
+    color: #41320c;
+    border-radius: 2%;
+    padding: 0;
+}
+
+.Home-product a, .Home-resultado a, .offer-product a {
+    text-decoration: none;
+}
+
+.Home-product p, .Home-resultado p, .offer-product p {
+    width: 100%;
+    font-size: medium;
+    margin: auto;
+}
+
+.Home-product h3, .Home-resultado h3, .offer-product h3 {
+    font-size: large;
+    margin: auto;
+    margin-top: 5%;
+}
+
+.Home-product button, .Home-resultado button, .offer-product button {
+    padding: 10px 10px;
+    font-size: small;
+    color: #000000;
+    background-color: #e2c72f;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0 15%;
+    width: 70%;
+    margin-bottom: 5%;
+}
+
+.Home-product button:hover, .Home-resultado button:hover, .offer-product button:hover {
+    background-color: #ffffff;
+    border: #3271ba 2px solid;
+    padding: 8px 8px;
+}
+
+.Home-product, .Home-resultado, .offer-product {
+    border-radius: 1%;
+    display: inline-block;
+    box-shadow: 0 15px 25px rgba(108, 75, 75, 0.42);
+    transition: transform 0.3s ease-in-out;
+    width: 40%;
+    margin: 10px;
+    background-color: #fff;
+}
+
+.Home-product:hover, .Home-resultado:hover, .offer-product:hover {
+    transform: translateY(-30px);
+    cursor: pointer;
+}
+
+.Home-product:hover p, .Home-product:hover h3, .Home-resultado:hover p, .Home-resultado:hover h3, .offer-product:hover p, .offer-product:hover h3 {
+    color: #3271ba;
+}
+
+.Home-product img, .Home-resultado img, .offer-product img {
+    width: 70%;
+    margin: 0 15%;
+    margin-top: 12%;
+    object-fit: cover;
+}
+
+.Home-product p, .Home-product h3, .Home-resultado p, .Home-resultado h3, .offer-product p, .offer-product h3 {
+    text-align: center;
+}
+
+.Home-product-link, .Home-resultado-link, .offer-product-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.Home-footer {
+    background-color: #242039;
+    color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.Home-footer p {
+    margin: 5px 0;
+}
+
+.Home-footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.Home-footer ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.Home-footer ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.Home-footer ul li a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+    .Home-product, .offer-product {
+      flex-direction: column;
+        margin: 0 8%;
+    }
+}
+
+.offer-banner {
+    background-color: #fdcb00;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.offer-banner h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.offer-banner p {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.offer-banner .btn-shop-now {
+    background-color: #43348e;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.offer-banner .btn-shop-now:hover {
+    background-color: #242039;
+}
+
+.container-resultados {
+    display: none;
+}
+
+.container-resultados.visible {
+    display: block;
+}
+
+.Home-products, .Home-resultados, .offer-products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 5%;
+    align-items: center;
+}
+
+.Home-product, .Home-resultado, .offer-product {
+    flex-basis: calc(20% - 10px);
+    margin: 5px;
+    border-radius: 1%;
+    display: inline-block;
+    box-shadow: 0 15px 25px rgba(108, 75, 75, 0.42);
+    transition: transform 0.3s ease-in-out;
+    background-color: #fff;
+}
+
+@media (max-width: 970px) {
+    .Home-product, .offer-product {
+      flex-basis: 30%;
+    }
+}
+
+@media (max-width: 600PX) {
+  .Home-product, .offer-product {
+    flex-basis: 40%;
+  }
+}
+
+@media (max-width: 480px) {
+    .Home-product, .offer-product {
+      flex-basis: content;
+    }
+}
